@@ -54,7 +54,7 @@ function startGame() {
 
 function generateBalls() {
     var positionX = Math.random() * 470 + 20
-    var velocityY = Math.random() * 1.9 + 1;
+    var velocityY = Math.random() * 1.5 + 1;
     var ball = new Ball({
         position: {
             x: positionX,
