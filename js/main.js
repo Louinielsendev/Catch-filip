@@ -11,16 +11,16 @@ var balls = [];
 var games = [];
 var intervalId;
 
-canvas.width = 874;
-canvas.height = 876;
+canvas.width = 585;
+canvas.height = 587;
 
 c.fillRect(0, 0, canvas.width, canvas.height);
 
 
 const box = new Box({
     position: {
-        x: 330,
-        y: 746
+        x: 220,
+        y: 500
     },
     velocity: {
         x: 0
@@ -37,6 +37,8 @@ function startGame() {
         lifes.appendChild(life)
     }
 
+    box.position.x = 220
+
     score.innerHTML = '0';
     
     backgroundImg.style.display = 'none';
@@ -51,8 +53,8 @@ function startGame() {
 }
 
 function generateBalls() {
-    var positionX = Math.random() * 700 + 20
-    var velocityY = Math.random() * 1.5 + 1;
+    var positionX = Math.random() * 470 + 20
+    var velocityY = Math.random() * 1.9 + 1;
     var ball = new Ball({
         position: {
             x: positionX,
@@ -93,8 +95,8 @@ function animate() {
 
     balls.forEach((ball, i) => {
         ball.update();
-        if (ball.position.y > box.position.y - 80 && ball.position.x + 80 > box.position.x && ball.position.x < box.position.x + 200) {
-            if (!(ball.position.y > box.position.y - 30 && ball.position.x + 80 > box.position.x)) {
+        if (ball.position.y > box.position.y - ball.height && ball.position.x + ball.width > box.position.x && ball.position.x < box.position.x + 200) {
+            if (!(ball.position.y > box.position.y - 30 && ball.position.x + ball.width > box.position.x)) {
                 setTimeout(() => {
                     balls.splice(i, 1)
                 }, 0)

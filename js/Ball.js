@@ -6,16 +6,16 @@ class Ball {
         const image = new Image();
         image.src = './img/fille.png';
         this.image = image
-        this.width = 80;
-        this.height = 80;
+        this.width = 62;
+        this.height = 62;
     }
 
 
 
     draw() {
         //c.fillStyle = 'green';
-        //c.fillRect(this.position.x, this.position.y, 70, 70)
-        c.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
+        //c.fillRect(this.position.x, this.position.y, this.width, this.height)
+        c.drawImage(this.image, this.position.x , this.position.y, this.width , this.height  );
     }
 
     update() {
