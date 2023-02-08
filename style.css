@@ -55,3 +55,35 @@ button {
     
 }
 
+.menu {
+    left: 170px;
+    top: 100px;
+    position: absolute;
+    background-color: #e0e0e1;
+    background-image: url(img/paper-texture.jpg);
+    border-radius: 7px;
+    height: 300px;
+    width: 250px;
+    text-align: center;
+    
+}
+
+.title {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.4rem;
+}
+
+.menu-child {
+    position: relative;
+}
+
+.start-game {
+    position: absolute;
+    cursor: pointer;
+    left: 35px;
+    top: 170px;
+}
+
+.start-game:hover {
+    text-decoration: underline;
+}

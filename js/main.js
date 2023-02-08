@@ -1,11 +1,11 @@
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
-const startButton = document.querySelector('button');
+const startButton = document.querySelector('.start-game');
 startButton.addEventListener('click', startGame)
 const backgroundImg = document.querySelector('.backgroundImg');
-const gameover =  document.querySelector('.gameover')
 const score = document.querySelector('.score');
 const lifes = document.querySelector('.lifes');
+const menu = document.querySelector('.menu')
 
 var balls = [];
 var games = [];
@@ -42,10 +42,11 @@ function startGame() {
     score.innerHTML = '0';
     
     backgroundImg.style.display = 'none';
+    menu.style.display = 'none'
     var game = new Game();
     games.push(game);
     animate()
-    gameover.style.display = 'none';
+    
     startButton.style.display = 'none';
     intervalId = window.setInterval(function () {
         generateBalls();
@@ -168,7 +169,7 @@ function gameOver() {
     balls = [];   
     games = [];
     
-    gameover.style.display = 'inline';
+    menu.style.display = 'inline'
     startButton.style.display = 'inline';
     startButton.innerHTML = 'Play again'
     
