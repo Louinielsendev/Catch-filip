@@ -3,6 +3,12 @@
 
 }
 
+body {
+    background-color: rgb(56, 55, 55);
+    display: flex;
+    justify-content: center;
+}
+
 .container {
     position: relative;
     width: 585px;
